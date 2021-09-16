@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CensusService from "./services/censusService";
 import CensusListItem from "./components/CensusListItem";
+import "./App.css";
 
 const App = () => {
   const service = new CensusService();
