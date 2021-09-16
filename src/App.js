@@ -14,7 +14,6 @@ const App = () => {
   const [census, setCensus] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [sortedData, setSortedData] = useState(false);
-  const [isPanelVisible, setIsPanelVisible] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
