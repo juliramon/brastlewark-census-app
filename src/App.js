@@ -3,6 +3,7 @@ import CensusService from "./services/censusService";
 import CensusListItem from "./components/CensusListItem";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import FilterBar from "./components/FilterBar";
 
 const App = () => {
   const service = new CensusService();
@@ -56,6 +57,7 @@ const App = () => {
       </header>
       <main className="app-wrapper">
         <section className="census-list">
+          <FilterBar />
           <div className="census-list__wrapper">{censusList}</div>
         </section>
       </main>

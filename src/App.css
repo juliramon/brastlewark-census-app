@@ -1,12 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap");
+
 /*STYLES GLOBAL*/
 
 body {
   padding: 0;
   margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
 .app-wrapper {
   padding: 0 20px;
+  margin: 20px 50px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /*STYLES NAVBAR*/
@@ -19,8 +27,10 @@ header {
 .navigation-bar {
   display: flex;
   align-items: center;
-  background-color: #e8e8e8;
-  padding: 15px 20px;
+  background-color: rgb(51, 71, 91);
+  padding: 15px 50px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .navigation-bar__col:first-child {
@@ -45,6 +55,12 @@ header {
   font-size: 15px;
 }
 
+.navigation-bar__col .form-control::placeholder {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
 .navigation-bar__col .form-control:active,
 .navigation-bar__col .form-control:focus {
   outline: none;
@@ -52,25 +68,46 @@ header {
 
 /*STYLES CENSUS LIST*/
 
+.filter__bar {
+  background-color: rgb(245, 248, 250);
+  grid-auto-rows: minmax(45px, auto) !important;
+}
+
+.filter__bar .filter-bar__item {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.filter__bar,
 .census-list__item {
   display: grid;
-  grid-template-columns: 50px 70px 200px 50px 100px 100px 100px 250px 250px;
+  grid-template-columns:
+    50px 110px 200px 50px 100px 100px 100px minmax(500px, auto)
+    minmax(230px, auto);
   gap: 5px;
-  grid-auto-rows: minmax(80px, auto);
+  justify-content: flex-start;
+  grid-auto-rows: minmax(50px, auto);
   align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0 -20px;
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 .census-list__item-cell.thumbnail {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   overflow: hidden;
   border: 1px solid #e8e8e8;
+  justify-content: center;
 }
 
 .census-list__item-cell.thumbnail img {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   object-fit: cover;
 }
 
@@ -85,6 +122,12 @@ header {
   border-radius: 8px;
   display: inline-block;
   margin-right: 8px;
+}
+
+.census-list__item-cell.professions,
+.census-list__item-cell.friends {
+  white-space: pre-wrap;
+  max-width: 470px;
 }
 
 /*STYLES CENSUS LIST*/
