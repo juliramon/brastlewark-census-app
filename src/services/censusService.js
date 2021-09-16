@@ -3,7 +3,8 @@ const { default: Axios } = require("axios");
 class CensusService {
   constructor() {
     let service = Axios.create({
-      baseURL: process.env.CENSUS_URL,
+      baseURL:
+        "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json",
       headers: {
         "Content-Type": "application/json",
       },
