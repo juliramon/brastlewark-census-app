@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project was bootstrapped with [Create React App]. Follow the next steps to get started:
 
-## Available Scripts
+1. Clone this project to your local dev environment
+2. In the project directory, run **npm install** or its alias **npm i** to install all package dependencies.
+3. Run either one of the two scrips below to run the app in the development mode:
 
-In the project directory, you can run:
+   1. `yarn start`
+   2. `npm start`
 
-### `yarn start`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Testing offline mode
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Should you are curious about how the app leverages the lack of network connection, run the following scripts to build and serve a production version:
 
-### `yarn test`
+   1. `yarn global add serve`
+   2. `yarn build`
+   3. `serve -s build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About this project
 
-### `yarn build`
+Project designed and developed by Juli Ramon.
+Project built with React using CSS for styling and Tabler Icons for the icons.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* The UI of the app tries to mimic a CRM so that heroes can have a glance at the gnomes data very quickly
+* The app features a search bar to quickly find gnomes by name
+* The app features a filter bar to quickly sort gnomes by ID, name, age, weight and height
+* The app features a coloured box to facilitate the identification of the hair colour of the gnomes
+* Gnomes with no profession are tagged as "Is unemployed"
+* Gnomes with no friends are tagged as "Has no friends"
+* Since heroes are unsure of the gnomes gender, the app is rendomly assigning a gender to each gnome
+* The app has been developed so that UI is not blocked by network connections or long operations using workingServices.
+* Data is consumed from the URL provided, available in the `services`folder
+* Images coming from the network are cached by the browser by default in order to improve performance
+* Over the development process, HTML, CSS and ES6 syntax have been used
