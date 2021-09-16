@@ -1,3 +1,57 @@
+/*STYLES GLOBAL*/
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app-wrapper {
+  padding: 0 20px;
+}
+
+/*STYLES NAVBAR*/
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  background-color: #e8e8e8;
+  padding: 15px 20px;
+}
+
+.navigation-bar__col:first-child {
+  margin-right: 30px;
+}
+
+.navigation-bar__col.search-bar {
+  flex: 1;
+}
+
+.navigation-bar__col.search-bar form {
+  flex: 1;
+  padding: 0 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.navigation-bar__col .form-control {
+  border: 0;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+.navigation-bar__col .form-control:active,
+.navigation-bar__col .form-control:focus {
+  outline: none;
+}
+
+/*STYLES CENSUS LIST*/
+
 .census-list__item {
   display: grid;
   grid-template-columns: 50px 70px 200px 50px 100px 100px 100px 250px 250px;
@@ -32,3 +86,5 @@
   display: inline-block;
   margin-right: 8px;
 }
+
+/*STYLES CENSUS LIST*/

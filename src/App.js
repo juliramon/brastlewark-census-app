@@ -2,18 +2,22 @@ import { useEffect, useState } from "react";
 import CensusService from "./services/censusService";
 import CensusListItem from "./components/CensusListItem";
 import "./App.css";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   const service = new CensusService();
   const [hasCensus, setHasCensus] = useState(false);
   const [census, setCensus] = useState({});
+  const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsFetching(true);
       const { Brastlewark } = await service.getCensusData();
       if (Brastlewark) {
         setCensus(Brastlewark);
         setHasCensus(true);
+        setIsFetching(false);
       }
     };
     fetchData();
@@ -39,11 +43,14 @@ const App = () => {
 
   return (
     <>
-      <div className="app__wrapper">
-        <div className="census-list">
+      <header>
+        <NavBar />
+      </header>
+      <main className="app-wrapper">
+        <section className="census-list">
           <div className="census-list__wrapper">{censusList}</div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 };
