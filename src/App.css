@@ -174,3 +174,90 @@ header {
   white-space: pre-wrap;
   max-width: 470px;
 }
+
+/*STYLES FILTER PANEL*/
+
+.filter-panel {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 4px 5px 10px rgba(51, 71, 91, 0.2);
+  position: fixed;
+  width: 100%;
+}
+
+.filter-panel__wrapper,
+.filter-panel__title-area {
+  display: flex;
+  align-items: flex-start;
+}
+
+.filter-panel__wrapper {
+  padding: 10px 205px;
+}
+
+.filter-panel__title-area {
+  padding: 30px 205px 0 205px;
+}
+
+.filter-panel__title-area span {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+
+.filter-panel__col {
+  margin-right: 50px;
+}
+
+.filter-panel .filter-panel__col span,
+.filter-panel .filter-panel__col label {
+  font-size: 0.9rem;
+}
+
+.filter-panel span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.filter-panel label {
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filter-panel label input {
+  margin-right: 10px;
+}
+
+.filter-panel .filter-panel__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 205px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.filter-panel .filter-panel__footer button {
+  cursor: pointer;
+}
+
+.filter-panel .filter-panel__footer .btn-dark {
+  background-color: rgb(51, 71, 91) !important;
+  color: rgb(245, 248, 250) !important;
+  border: none;
+  padding: 10px 35px !important;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.filter-panel .filter-panel__footer .btn-soft {
+  border: 1px solid rgb(51, 71, 91) !important;
+  color: rgb(51, 71, 91) !important;
+  background-color: #ffffff;
+  padding: 10px 35px !important;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
