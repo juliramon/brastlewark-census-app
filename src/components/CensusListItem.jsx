@@ -17,6 +17,14 @@ const CensusListItem = ({
   } else {
     professionsList = "Is unemployed";
   }
+
+  let friendsList;
+  if (friends.length > 0) {
+    friendsList = friends.map((el, idx) => <li key={idx}>{el}</li>);
+  } else {
+    friendsList = "Has no friends";
+  }
+
   return (
     <div className="census-list__item">
       <div className="census-list__item-cell id">{id}</div>
@@ -31,7 +39,7 @@ const CensusListItem = ({
       <div className="census-list__item-cell professions">
         {professionsList}
       </div>
-      <div className="census-list__item-cell friends">{id}</div>
+      <div className="census-list__item-cell friends">{friendsList}</div>
     </div>
   );
 };
