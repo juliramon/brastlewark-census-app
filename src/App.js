@@ -6,8 +6,9 @@ import NavBar from "./components/NavBar";
 
 const App = () => {
   const service = new CensusService();
+  const [searchQuery, setSearchQuery] = useState("");
   const [hasCensus, setHasCensus] = useState(false);
-  const [census, setCensus] = useState({});
+  const [census, setCensus] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
@@ -23,28 +24,35 @@ const App = () => {
     fetchData();
   }, []);
 
+  const handleChange = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearchQuery(value);
+  };
+
   let censusList;
   if (hasCensus) {
-    censusList = census.map((el) => (
-      <CensusListItem
-        key={el.id}
-        id={el.id}
-        name={el.name}
-        thumbnail={el.thumbnail}
-        age={el.age}
-        weight={el.weight}
-        height={el.height}
-        hair_color={el.hair_color}
-        professions={el.professions}
-        friends={el.friends}
-      />
-    ));
+    censusList = census
+      .filter((item) => item.name.toLowerCase().includes(searchQuery))
+      .map((el) => (
+        <CensusListItem
+          key={el.id}
+          id={el.id}
+          name={el.name}
+          thumbnail={el.thumbnail}
+          age={el.age}
+          weight={el.weight}
+          height={el.height}
+          hair_color={el.hair_color}
+          professions={el.professions}
+          friends={el.friends}
+        />
+      ));
   }
 
   return (
     <>
       <header>
-        <NavBar />
+        <NavBar searchQuery={searchQuery} handleChange={handleChange} />
       </header>
       <main className="app-wrapper">
         <section className="census-list">

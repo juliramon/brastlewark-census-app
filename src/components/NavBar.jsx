@@ -1,17 +1,19 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ searchQuery, handleChange }) => {
   return (
     <nav className="navigation-bar">
       <div className="navigation-bar__col">
-        <span>Brasatlewark Census</span>
+        <span>Brastlewark Census</span>
       </div>
       <div className="navigation-bar__col search-bar">
         <form>
           <input
             type="text"
-            placeholder="Search gnomes..."
+            placeholder="Search gnomes by name..."
             className="form-control"
+            onChange={handleChange}
+            value={searchQuery}
           />
         </form>
       </div>
