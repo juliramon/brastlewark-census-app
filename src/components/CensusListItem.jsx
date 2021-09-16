@@ -3,6 +3,7 @@ import React from "react";
 const CensusListItem = ({
   id,
   name,
+  gender,
   thumbnail,
   age,
   weight,
@@ -38,6 +39,7 @@ const CensusListItem = ({
         <img src={thumbnail} alt={name} />
       </div>
       <div className="census-list__item-cell name">{name}</div>
+      <div className="census-list__item-cell gender">{gender}</div>
       <div className="census-list__item-cell age">{age}</div>
       <div className="census-list__item-cell weight">
         {roundNumberToNDecimals(weight, 2)}

@@ -83,7 +83,7 @@ header {
 .census-list__item {
   display: grid;
   grid-template-columns:
-    50px 110px 200px 50px 100px 100px 100px minmax(500px, auto)
+    50px 110px 200px 110px 50px 100px 100px 100px minmax(500px, auto)
     minmax(230px, auto);
   gap: 5px;
   justify-content: flex-start;
@@ -109,6 +109,10 @@ header {
   width: 35px;
   height: 35px;
   object-fit: cover;
+}
+
+.census-list__item-cell.gender {
+  text-transform: capitalize;
 }
 
 .census-list__item-cell.census-list__item-cell.hair-color {

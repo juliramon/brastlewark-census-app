@@ -34,20 +34,26 @@ const App = () => {
   if (hasCensus) {
     censusList = census
       .filter((item) => item.name.toLowerCase().includes(searchQuery))
-      .map((el) => (
-        <CensusListItem
-          key={el.id}
-          id={el.id}
-          name={el.name}
-          thumbnail={el.thumbnail}
-          age={el.age}
-          weight={el.weight}
-          height={el.height}
-          hair_color={el.hair_color}
-          professions={el.professions}
-          friends={el.friends}
-        />
-      ));
+      .map((el) => {
+        const genders = ["male", "female", "other"];
+        const randomGenderHandler =
+          genders[Math.floor(Math.random() * genders.length)];
+        return (
+          <CensusListItem
+            key={el.id}
+            id={el.id}
+            name={el.name}
+            gender={randomGenderHandler}
+            thumbnail={el.thumbnail}
+            age={el.age}
+            weight={el.weight}
+            height={el.height}
+            hair_color={el.hair_color}
+            professions={el.professions}
+            friends={el.friends}
+          />
+        );
+      });
   }
 
   return (
